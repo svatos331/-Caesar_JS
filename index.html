@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="title">Шифр "Цезаря"</h2>
+        <div class="result">
+            <div class="result__title field-title">Generated Password</div>
+            <input id="valueInputText" placeholder="Введите текст" class="result__viewbox" id="result">
+        </div>
+        <div class="settings" style="margin-top: 28px;">
+            <span class="settings__title field-title">результат</span>
+            <div class="setting" style="    height: 65px; ">
+                <p id="output" style="text-align: center;     width: 100%;"> </p>
+            </div>
+        </div>
+        <div class="length range__slider" data-min="1" data-max="33">
+            <div class="length__title field-title" data-length='0'>Шаг: <span id="stepBlock" style="color:#fff">1</span>
+            </div>
+            <input id="slider" type="range" oninput="rangeInput()" min="1" max="33" />
+        </div>
+        <div class="settings">
+            <span class="settings__title field-title">Настройки</span>
+            <div class="setting">
+                <input type="checkbox" id="uppercase" checked />
+                <label for="uppercase">Зашифровать</label>
+            </div>
+            <div class="setting">
+                <input type="checkbox" id="lowercase" checked />
+                <label for="lowercase">Расшифровать</label>
+            </div>
+
+        </div>
+
+        <button class="btn generate" id="generate">Запустить</button>
+    </div>
+    
+</body>
+
+</html>
